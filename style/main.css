@@ -64,7 +64,8 @@ color: rgba(139, 142, 153, 1);
 margin: auto;
 }
 
-.item{
+
+.items{
 display: flex;
 text-align: center;
 align-items: center;
@@ -142,7 +143,7 @@ padding: 0 10px;
 
 }
 
-.hero__btn{
+.hero__btns{
 font-family: Poppins;
 font-size: 18px;
 font-weight: 600;
@@ -246,8 +247,8 @@ flex-wrap: wrap;
 /* text-align: ; */
 gap: 49px;
 }
-
-.wrapper{
+/* 
+.wrapperes{
 width: 335px;
 height: 440px;
 margin-top: 50px;
@@ -262,7 +263,110 @@ display: flex;
 text-align: center;
 align-items: center;
 justify-content: center;
+} */
+
+
+.wrapper,
+.skeleton{
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
+
+.card,
+.skeleton__item{
+    width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(246, 246, 246, 1);
+
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+}
+.skeleton__img{
+    width: 100%;
+    height: 250px;
+    background: #ddd;
+    border-radius: 14px;
+}
+
+.buy__now{
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    justify-content: center;
+    background: yellowgreen;
+    border: none;
+    border-radius: 12px;
+}
+
+.skeleton__line{
+    width: 100%;
+    height: 30px;
+    background: #ddd;
+    margin-top: 14px;
+    border-radius: 6px;
+}
+
+.see__btn{
+    display: flex;
+
+}
+
+.see__more{
+    display: flex;
+    padding: 10px;
+
+}
+
+.skeleton__line:nth-child(3){
+    width: 80%; 
+}
+.skeleton__line:nth-child(4){
+    width: 60%; 
+}
+
+.skeleton__animation{
+    background: linear-gradient(90deg, #ddd, #f7f7f7, #ddd);
+    background-size: 200%;
+    animation: skeleton 1s linear 0s infinite;
+}
+
+@keyframes skeleton{
+    to{
+        background-position: 200%;
+    }
+}
+
+.desc{
+    color: red;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.collection{
+    display: flex;
+    list-style: none;
+    overflow: auto;
+    gap: 20px;
+    padding: 20px 50px;
+
+}
+
+.item data{
+    white-space: nowrap;
+}
+
 
 .product__btn{
 width: 196px;
